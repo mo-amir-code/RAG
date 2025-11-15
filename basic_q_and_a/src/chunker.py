@@ -15,9 +15,9 @@ def split_documents(documents, chunk_size: int = 600, chunk_overlap: int = 100):
     print(f"Split {len(documents)} documents into {len(split_docs)} chunks")
     
     if split_docs:
-        print(f"\nExample Chunk: ")
-        print(f"Content: {split_docs[0].page_content[:200]}...")
-        print(f"Metadata: {split_docs[0].metadata}")
+        print(f"\n[DEBUG] Example Chunk: ")
+        print(f"[DEBUG] Content: {split_docs[0].page_content[:200]}...")
+        print(f"[DEBUG] Metadata: {split_docs[0].metadata}")
         
         
     return split_docs

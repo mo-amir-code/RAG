@@ -37,8 +37,8 @@ class VectorStore:
                 metadata={"description": "PDF documents embedding for RAG"}
             )
             
-            print(f"Vector store initialized. Collection: {self.collection_name}")
-            print(f"Exsiting documents in collection: {self.collection.count()}")
+            print(f"[DEBUG] Vector store initialized. Collection: {self.collection_name}")
+            print(f"[DEBUG] Exsiting documents in collection: {self.collection.count()}")
             
         except Exception as e:
             print(f"[ERROR] Occurred while initializing vector store: {e}")
@@ -56,7 +56,7 @@ class VectorStore:
         if len(documents) != len(embeddings):
             raise ValueError("Number of documents must match with number of embeddings")
         
-        print(f"Adding {len(documents)} documents to vector store")
+        print(f"[DEBUG] Adding {len(documents)} documents to vector store")
         
         # Prepare data for ChromaDB
         ids = []
@@ -92,8 +92,8 @@ class VectorStore:
                 documents=documents_text
             )
             
-            print(f"Successfully added {len(documents)} documents to vector store")
-            print(f"Total documents in collection: {self.collection.count()}")
+            print(f"[DEBUG] Successfully added {len(documents)} documents to vector store")
+            print(f"[DEBUG] Total documents in collection: {self.collection.count()}")
         except Exception as e:
             print(f"[ERROR] Occurred while adding documents in vector store: {e}")
             raise

@@ -35,11 +35,11 @@ class EmbeddingManager:
             print("[ERROR] model is not loaded")
             raise ValueError("Model not loaded")
         
-        print(f"Generating embedding for {len(texts)} texts...")
+        print(f"[DEBUG] Generating embedding for {len(texts)} texts...")
         embeddings = self.model.encode(texts, show_progress_bar=True)
-        print(f"Generating embedding with shape: {embeddings.shape}")
+        print(f"[DEBUG] Generating embedding with shape: {embeddings.shape}")
         return embeddings
     
 
         
-embeddingManager = EmbeddingManager()
+embedding_manager = EmbeddingManager()
